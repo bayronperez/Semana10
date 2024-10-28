@@ -38,10 +38,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
-        // Inicializa FusedLocationProviderClient
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        // Verifica los permisos de ubicación
         checkLocationPermission();
     }
 
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    // Métodos del ciclo de vida de MapView
+    // Ciclo del MapView
     @Override
     protected void onResume() {
         super.onResume();
